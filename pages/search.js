@@ -7,12 +7,13 @@ import SearchResults from "../components/SearchResults";
 function Search( searchResults) {
     const router = useRouter();
     const {location, startDate, endDate, numberOfGuest}=router.query;
-    const formattedStartDate = format(new Date(startDate), "dd MMMM yy");
-    const formattedEndDate = format(new Date(endDate), "dd MMMM yy");
+    const  formattedStartDate=format(new Date(startDate), "dd MMMM yy");
+    const  formattedEndDate=format(new Date(endDate), "dd MMMM yy");
     const range = `${formattedStartDate} - ${formattedEndDate}`;
+
     return (
         <div>
-            <Header placeholder={`${location} | ${range}| ${numberOfGuest} `}/>
+            <Header placeholder={`${location} | ${range} | ${numberOfGuest} `}/>
             <main>
                 <section className="flex-grow pt-14 px-6">
                     <p className="text-xs">
@@ -27,7 +28,7 @@ function Search( searchResults) {
                         <p className="button">Cancellation Flex</p>
                     </div>
                 </section>
-                <section>
+                <section className=" md:w-4/5 mx-auto">
                     <SearchResults/>
                 </section>
             </main>

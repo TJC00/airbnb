@@ -7,10 +7,10 @@ function SearchResults(props) {
     return (
         <div className="flex flex-col">
             {Object.entries(explore).map(([key,{ name, distance}])=>(
-                <div key={key} className="flex items-center first:border-t-2 border-gray-600 py-7 px-5 hover:opacity-60 cursor-pointer hover:shadow-lg shadow-gray-600 hover:scale-105 transition transform duration-200 ease-out">
+                <div key={key} className="flex items-center first:border-t-2 border-gray-600 py-7 px-5 hover:opacity-60 cursor-pointer hover:shadow-lg shadow-gray-600 transition transform duration-200 ease-out">
                     {/* right image */}
                     <div className="relative h-24 w-40 md:w-80 md:h-52 flex-shrink-0">
-                        <Image src={brabus} layout="fill" className="rounded-lg"/>
+                        <Image src={brabus} layout="fill" className="rounded-lg" alt="Search Results"/>
                     </div>
                     {/* left container */}
                     <div className="flex flex-col flex-grow pl-5">

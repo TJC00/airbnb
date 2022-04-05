@@ -36,9 +36,9 @@ function Header({placeholder}) {
       router.push({
           pathname:"/search",
               query:{
-              location: searchInput,
+                  location: searchInput,
                   startDate:endDate.toISOString(),
-                endDate:endDate.toISOString(),
+                  endDate:endDate.toISOString(),
                   numberOfGuest:numberOfGuest,
             },
         });
